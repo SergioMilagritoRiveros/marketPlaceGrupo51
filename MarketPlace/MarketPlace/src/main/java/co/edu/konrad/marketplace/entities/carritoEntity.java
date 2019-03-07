@@ -45,7 +45,7 @@ public class carritoEntity implements Serializable {
     *atributo cantidad
      */
     @Column(name = "cantidad")
-    private long cantidad;
+    private Long cantidad;
     /*
     *atributo valor total
      */
@@ -83,7 +83,7 @@ public class carritoEntity implements Serializable {
         return cantidad;
     }
 
-    public void setCantidad(long cantidad) {
+    public void setCantidad(Long cantidad) {
         this.cantidad = cantidad;
     }
 

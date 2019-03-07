@@ -70,11 +70,11 @@ public class productoEntity implements Serializable {
         this.marca = marca;
     }
 
-    public long getValorUnitario() {
+    public Long getValorUnitario() {
         return valorUnitario;
     }
 
-    public void setValorUnitario(int valorUnitario) {
+    public void setValorUnitario(Long valorUnitario) {
         this.valorUnitario = valorUnitario;
     }
 

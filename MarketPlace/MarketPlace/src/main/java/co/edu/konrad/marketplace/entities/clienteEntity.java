@@ -14,6 +14,7 @@ import javax.persistence.Id;
 import java.util.Date;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
 /**
  *
  * @author Sergio E. Riveros R.
@@ -41,6 +42,7 @@ public class clienteEntity  implements Serializable{
     *atributo fecha de nacimiento del cliente
     */
     @Column (name = "fecha_nacimiento")
+    @Temporal(javax.persistence.TemporalType.DATE)
     private Date fecha_nacimiento;
     /*
     *atributo numero de documento del cliente

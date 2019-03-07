@@ -17,7 +17,7 @@ public class productoDTO {
     /**
      * atributo id
      */
-    private long id;
+    private Long id;
     /**
      * atributo marca
      */
@@ -30,24 +30,27 @@ public class productoDTO {
     /**
      * atributo valor unitario
      */
-    private long valorUnitario;
+    private Long valorUnitario;
 
     /**
-     * atributo valor unitario
+     * constructor producto DTO
      */
-    public productoDTO(productoEntity prod) {
+    
+    public productoDTO (productoEntity prod) {
         this.id = prod.getIdProducto();
         this.marca = prod.getMarca();
         this.nombreProducto = prod.getMarca();
-        this.valorUnitario = prod.getIdProducto();
+        this.valorUnitario = prod.getValorUnitario();
     }
+
+   
 
     public productoEntity toEntity(){
     productoEntity productoEntity=new productoEntity();
-    productoEntity.setIdProducto(id);
-    productoEntity.setMarca(marca);
-    productoEntity.setNombreProducto(nombreProducto);
-    productoEntity.setValorUnitario(0);
+    productoEntity.setIdProducto(this.id);
+    productoEntity.setMarca(this.marca);
+    productoEntity.setNombreProducto(this.nombreProducto);
+    productoEntity.setValorUnitario(this.valorUnitario);
     return productoEntity;
     }
     public long getId() {
@@ -78,7 +81,7 @@ public class productoDTO {
         return valorUnitario;
     }
 
-    public void setValorUnitario(long valorUnitario) {
+    public void setValorUnitario(Long valorUnitario) {
         this.valorUnitario = valorUnitario;
     }
 
